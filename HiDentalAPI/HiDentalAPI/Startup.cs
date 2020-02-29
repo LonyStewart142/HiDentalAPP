@@ -1,21 +1,9 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using BussinesLogic.Contracts;
-using BussinesLogic.Services;
-using BussinesLogic.UnitOfWork;
-using DataLayer.Persistence;
 using HiDentalAPI.Extensions;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.HttpsPolicy;
-using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using Microsoft.Extensions.Logging;
 
 namespace HiDentalAPI
 {
@@ -30,14 +18,9 @@ namespace HiDentalAPI
 
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
-        { 
-            services.AddDbContext<ApplicationDbContext>(x => x.UseSqlite(Configuration.GetConnectionString("DefaultConnection"),s=>s.MigrationsAssembly("HiDentalAPI")));
-
-
-            //services.ConfigureDbContexts(Configuration);
-            // services.ImplementServices();
-            services.AddScoped<IPatientService, PatientService>();
-            services.AddScoped<IUnitOfWork, UnitOfWork>();
+        {
+            services.ConfigureDbContexts(Configuration);
+            services.ImplementServices();
             services.AddControllers();
 
         }

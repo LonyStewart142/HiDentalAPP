@@ -1,8 +1,9 @@
 {
   "runtimeOptions": {
     "additionalProbingPaths": [
-      "/Users/lonymejia/.dotnet/store/|arch|/|tfm|",
-      "/Users/lonymejia/.nuget/packages"
+      "C:\\Users\\Orbis\\.dotnet\\store\\|arch|\\|tfm|",
+      "C:\\Users\\Orbis\\.nuget\\packages",
+      "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
     ]
   }
 }
