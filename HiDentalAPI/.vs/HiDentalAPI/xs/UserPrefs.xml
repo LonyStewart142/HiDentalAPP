@@ -1,0 +1,31 @@
+﻿<Properties StartupConfiguration="{49E20FB7-DE21-49E5-A419-D18165F65FAD}|Default">
+  <MonoDevelop.Ide.Workbench ActiveDocument="HiDentalAPI/Controllers/PatientController.cs">
+    <Files>
+      <File FileName="HiDentalAPI/Controllers/PatientController.cs" Line="23" Column="34" />
+      <File FileName="Commons/Helpers/EmptyClass.cs" />
+      <File FileName="Commons/Helpers/BaseResponse.cs" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="HiDentalAPI" expanded="True">
+            <Node name="DataLayer" expanded="True" selected="True" />
+            <Node name="HiDentalAPI" expanded="True" />
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches>
+    <Watch file="../../../HiDentalAPI/Controllers/PatientController.cs" line="31" column="16" endLine="31" endColumn="67" offsetX="-1" offsetY="-1" expression="patient[0].Id" liveUpdate="False" />
+  </MonoDevelop.Ide.DebuggingService.PinnedWatches>
+  <MonoDevelop.Ide.ItemProperties.HiDentalAPI PreferredExecutionTarget="/Applications/Safari.app" />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore>
+      <Breakpoint file="/Users/lonymejia/Projects/HiDental/HiDentalAPI/HiDentalAPI/Controllers/WeatherForecastController.cs" relfile="HiDentalAPI/Controllers/WeatherForecastController.cs" line="27" column="1" />
+      <Breakpoint file="/Users/lonymejia/Projects/HiDental/HiDentalAPI/HiDentalAPI/Controllers/PatientController.cs" relfile="HiDentalAPI/Controllers/PatientController.cs" line="32" column="1" />
+    </BreakpointStore>
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>
