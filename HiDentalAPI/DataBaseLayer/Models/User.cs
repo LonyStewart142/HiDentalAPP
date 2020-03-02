@@ -7,15 +7,15 @@ namespace DatabaseLayer.Models
     public class User: CommonsProperty
     {
        
-        public string Nombres { get; set; }
-        public string Apellidos { get; set; }
-        public int Sexo { get; set; }
-        public string Correo { get; set; }
-        public string Usuario { get; set; }
+        public string Names { get; set; }
+        public string LastNames { get; set; }
+        public int Sex { get; set; }
+        public string Email { get; set; }
+        public string UserName { get; set; }
         public byte[] PasswordHash { get; set; }
         public byte[] PasswordSalt { get; set; }
         
-        public ICollection<Cita> Citas { get; set; }
-        public ICollection<Consulta> Consultas { get; set; }
+        public virtual ICollection<Appointment> Citas { get; set; }
+        public virtual ICollection<Consultation> Consultas { get; set; }
     }
 }
