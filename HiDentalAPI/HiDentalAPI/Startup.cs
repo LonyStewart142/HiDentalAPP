@@ -1,9 +1,11 @@
+using DataBaseLayer.Settings;
 using HiDentalAPI.Extensions;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Microsoft.Extensions.Options;
 
 namespace HiDentalAPI
 {
@@ -22,17 +24,25 @@ namespace HiDentalAPI
             services.ConfigureDbContexts(Configuration);
             services.ImplementServices();
             services.AddControllers();
+            services.AddDocumentation();
+            services.AddSettings(Configuration);
 
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
+        public void Configure(IApplicationBuilder app, IWebHostEnvironment env, IOptions<SwaggerSetting> options)
         {
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
             }
-
+            app.UseStaticFiles();
+            app.UseSwagger(x => x.RouteTemplate = options.Value.RouteTemplate);
+            app.UseSwaggerUI(x =>
+            {
+                x.SwaggerEndpoint(options.Value.Endpoint, options.Value.Name);
+                x.RoutePrefix = options.Value.Route;
+            });
             app.UseHttpsRedirection();
 
             app.UseRouting();

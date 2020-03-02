@@ -3,6 +3,7 @@
     "HiDentalAPI": {
       "commandName": "Project",
       "launchBrowser": true,
+      "launchUrl": "Documentation",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
       },
