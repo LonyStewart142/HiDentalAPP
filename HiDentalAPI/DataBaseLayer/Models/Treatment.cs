@@ -3,8 +3,6 @@ namespace DataBaseLayer.Models
 {
     public class Treatment
     {
-        public Treatment()
-        {
-        }
+      
     }
 }

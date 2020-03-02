@@ -4,14 +4,14 @@ using BussinesLayer.Contracts;
 
 namespace DatabaseLayer.Models
 {
-    public class Plan_Pago: CommonsProperty
+    public class Payment_plan : CommonsProperty
     {
         
 
-        public DateTime Inicia { get; set; }
-        public DateTime Finaliza { get; set; }
+        public DateTime Start { get; set; }
+        public DateTime Finish { get; set; }
 
-        public ICollection<AbonoPlan_Pago> Citas { get; set; }
+        public virtual ICollection<ChargePayment_Plan> ChargesPayment_Plan { get; set; }
 
     }
 }

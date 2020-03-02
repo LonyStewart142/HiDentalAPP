@@ -4,13 +4,13 @@ using DatabaseLayer.Models;
 
 namespace DatabaseLayer.Models
 {
-    public class Cita : CommonsProperty
+    public class Appointment : CommonsProperty
     {
-        public string Objetivo { get; set; }
-        public string Nota { get; set; }
+        public string Objective { get; set; }
+        public string Note { get; set; }
 
-        public Guid PacienteID { get; set; }
-        public Patient Paciente { get; set; }
+        public Guid PatientID { get; set; }
+        public Patient Patient { get; set; }
 
         public Guid UserID { get; set; }
         public User User { get; set; }
