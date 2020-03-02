@@ -9,29 +9,29 @@ namespace DatabaseLayer.Models
     public class Patient : CommonsProperty
     {
         [Required(ErrorMessage = "EL CAMPO {0} ES REQUERIDO")]
-        public string Nombres { get; set; }
+        public string Names { get; set; }
         [Required]
-        public string Apellidos { get; set; }
+        public string LastNames { get; set; }
         [Required]
-        public string Cedula { get; set; }
+        public string Identification_card { get; set; }
         [Required]
-        public string Direccion { get; set; }
-        public string Direccion_Ofic { get; set; }
-        public string Foto { get; set; }
+        public string Address { get; set; }
+        public string Address_Office { get; set; }
+        public string Photo { get; set; }
         [Required]
-        public string Sexo { get; set; }
+        public string Sex { get; set; }
         [Required]
         public string Email { get; set; }
-        public string Ocupaccion { get; set; }
-        public string Referido_Por { get; set; }
+        public string Occupation { get; set; }
+        public string Referred_to_by{ get; set; }
         [Required]
-        public string Telefono_celular { get; set; }
-        public string Tel_Oficina { get; set; }
+        public string Cellphone_number{ get; set; }
+        public string PhoneNumber_Office { get; set; }
         [Required]
-        public string Fecha_Nacimiento { get; set; }
+        public string BirthDate { get; set; }
 
-        public virtual IEnumerable<Cita> Citas { get; set; }
-        public virtual IEnumerable<Consulta> Consultas { get; set; }
+        public virtual IEnumerable<Appointment> Appointments { get; set; }
+        public virtual IEnumerable<Consultation> Consultations { get; set; }
 
     
     }

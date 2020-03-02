@@ -3,7 +3,7 @@ using BussinesLayer.Contracts;
 
 namespace DatabaseLayer.Models
 {
-    public class AbonoPlan_Pago: CommonsProperty
+    public class ChargePayment_Plan : CommonsProperty
     {
        
         public double Charge { get; set; }
