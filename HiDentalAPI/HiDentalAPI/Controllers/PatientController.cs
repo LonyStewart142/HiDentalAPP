@@ -1,5 +1,4 @@
-﻿using DatabaseLayer.Models;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 
 namespace HiDentalAPI.Controllers
 {

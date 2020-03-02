@@ -11,6 +11,6 @@ namespace DatabaseLayer.Models
         public string Description { get; set; }
 
         public Guid  PaymentPlanID { get; set; }
-        public Payment_plan Payment_plan { get; set; }
+       // public Payment_plan Payment_plan { get; set; }
     }
 }

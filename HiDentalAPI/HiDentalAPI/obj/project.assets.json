@@ -5164,6 +5164,7 @@
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v3.0": [
       "BussinesLayer >= 1.0.0",
+      "DataBaseLayer >= 1.0.0",
       "Microsoft.EntityFrameworkCore.Design >= 3.0.2",
       "Swashbuckle.AspNetCore.Annotations >= 5.0.0",
       "Swashbuckle.AspNetCore.Swagger >= 5.0.0",
@@ -5171,37 +5172,34 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Orbis\\.nuget\\packages\\": {},
-    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
+    "/Users/lonymejia/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Orbis\\source\\repos\\HiDentalAPP\\HiDentalAPI\\HiDentalAPI\\HiDentalAPI.csproj",
+      "projectUniqueName": "/Users/lonymejia/Projects/HiDental/HiDentalAPI/HiDentalAPI/HiDentalAPI.csproj",
       "projectName": "HiDentalAPI",
-      "projectPath": "C:\\Users\\Orbis\\source\\repos\\HiDentalAPP\\HiDentalAPI\\HiDentalAPI\\HiDentalAPI.csproj",
-      "packagesPath": "C:\\Users\\Orbis\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Orbis\\source\\repos\\HiDentalAPP\\HiDentalAPI\\HiDentalAPI\\obj\\",
+      "projectPath": "/Users/lonymejia/Projects/HiDental/HiDentalAPI/HiDentalAPI/HiDentalAPI.csproj",
+      "packagesPath": "/Users/lonymejia/.nuget/packages/",
+      "outputPath": "/Users/lonymejia/Projects/HiDental/HiDentalAPI/HiDentalAPI/obj/",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-      ],
       "configFilePaths": [
-        "C:\\Users\\Orbis\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        "/Users/lonymejia/.config/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "netcoreapp3.0"
       ],
       "sources": {
-        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "netcoreapp3.0": {
           "projectReferences": {
-            "C:\\Users\\Orbis\\source\\repos\\HiDentalAPP\\HiDentalAPI\\BussinesLayer\\BussinesLayer.csproj": {
-              "projectPath": "C:\\Users\\Orbis\\source\\repos\\HiDentalAPP\\HiDentalAPI\\BussinesLayer\\BussinesLayer.csproj"
+            "/Users/lonymejia/Projects/HiDental/HiDentalAPI/BussinesLayer/BussinesLayer.csproj": {
+              "projectPath": "/Users/lonymejia/Projects/HiDental/HiDentalAPI/BussinesLayer/BussinesLayer.csproj"
+            },
+            "/Users/lonymejia/Projects/HiDental/HiDentalAPI/DataBaseLayer/DataBaseLayer.csproj": {
+              "projectPath": "/Users/lonymejia/Projects/HiDental/HiDentalAPI/DataBaseLayer/DataBaseLayer.csproj"
             }
           }
         }
@@ -5252,7 +5250,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.0.100\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/3.1.102/RuntimeIdentifierGraph.json"
       }
     }
   }
