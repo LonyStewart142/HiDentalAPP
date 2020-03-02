@@ -201,10 +201,16 @@ C:\Users\Orbis\source\repos\HiDentalAPP\HiDentalAPI\HiDentalAPI\bin\Debug\netcor
 C:\Users\Orbis\source\repos\HiDentalAPP\HiDentalAPI\HiDentalAPI\obj\Debug\netcoreapp3.0\HiDentalAPI.csprojAssemblyReference.cache
 C:\Users\Orbis\source\repos\HiDentalAPP\HiDentalAPI\HiDentalAPI\obj\Debug\netcoreapp3.0\staticwebassets\HiDentalAPI.StaticWebAssets.Manifest.cache
 C:\Users\Orbis\source\repos\HiDentalAPP\HiDentalAPI\HiDentalAPI\obj\Debug\netcoreapp3.0\staticwebassets\HiDentalAPI.StaticWebAssets.xml
-C:\Users\Orbis\source\repos\HiDentalAPP\HiDentalAPI\HiDentalAPI\obj\Debug\netcoreapp3.0\HiDentalAPI.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\Orbis\source\repos\HiDentalAPP\HiDentalAPI\HiDentalAPI\obj\Debug\netcoreapp3.0\HiDentalAPI.AssemblyInfoInputs.cache
 C:\Users\Orbis\source\repos\HiDentalAPP\HiDentalAPI\HiDentalAPI\obj\Debug\netcoreapp3.0\HiDentalAPI.AssemblyInfo.cs
 C:\Users\Orbis\source\repos\HiDentalAPP\HiDentalAPI\HiDentalAPI\obj\Debug\netcoreapp3.0\HiDentalAPI.RazorTargetAssemblyInfo.cache
 C:\Users\Orbis\source\repos\HiDentalAPP\HiDentalAPI\HiDentalAPI\obj\Debug\netcoreapp3.0\HiDentalAPI.csproj.CopyComplete
 C:\Users\Orbis\source\repos\HiDentalAPP\HiDentalAPI\HiDentalAPI\obj\Debug\netcoreapp3.0\HiDentalAPI.dll
 C:\Users\Orbis\source\repos\HiDentalAPP\HiDentalAPI\HiDentalAPI\obj\Debug\netcoreapp3.0\HiDentalAPI.pdb
+C:\Users\Orbis\source\repos\HiDentalAPP\HiDentalAPI\HiDentalAPI\bin\Debug\netcoreapp3.0\Microsoft.OpenApi.dll
+C:\Users\Orbis\source\repos\HiDentalAPP\HiDentalAPI\HiDentalAPI\bin\Debug\netcoreapp3.0\Swashbuckle.AspNetCore.Swagger.dll
+C:\Users\Orbis\source\repos\HiDentalAPP\HiDentalAPI\HiDentalAPI\bin\Debug\netcoreapp3.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\Users\Orbis\source\repos\HiDentalAPP\HiDentalAPI\HiDentalAPI\bin\Debug\netcoreapp3.0\Swashbuckle.AspNetCore.Annotations.dll
+C:\Users\Orbis\source\repos\HiDentalAPP\HiDentalAPI\HiDentalAPI\bin\Debug\netcoreapp3.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Users\Orbis\source\repos\HiDentalAPP\HiDentalAPI\HiDentalAPI\obj\Debug\netcoreapp3.0\HiDentalAPI.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\Orbis\source\repos\HiDentalAPP\HiDentalAPI\HiDentalAPI\obj\Debug\netcoreapp3.0\HiDentalAPI.MvcApplicationPartsAssemblyInfo.cache

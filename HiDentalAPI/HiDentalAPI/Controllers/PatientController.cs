@@ -7,6 +7,7 @@ namespace HiDentalAPI.Controllers
     [ApiController]
     public class PatientController : ControllerBase
     {
+        [HttpGet]
         public IActionResult Index() => Ok("HI 💥💥💥");        
     }
 }
