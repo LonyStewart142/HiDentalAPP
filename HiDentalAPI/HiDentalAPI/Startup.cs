@@ -21,11 +21,14 @@ namespace HiDentalAPI
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddJwtConfiguration(Configuration);
+            services.ImplementsCors();
+            services.AddCustomIdentity();
             services.ConfigureDbContexts(Configuration);
+            services.AddSettings(Configuration);
             services.ImplementServices();
             services.AddControllers();
             services.AddDocumentation();
-            services.AddSettings(Configuration);
 
         }
 
@@ -36,6 +39,8 @@ namespace HiDentalAPI
             {
                 app.UseDeveloperExceptionPage();
             }
+            app.UseAuthentication();
+            app.UseCors(nameof(Startup));
             app.UseStaticFiles();
             app.UseSwagger(x => x.RouteTemplate = options.Value.RouteTemplate);
             app.UseSwaggerUI(x =>

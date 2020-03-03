@@ -3,7 +3,7 @@ using BussinesLayer.Contracts;
 
 namespace DatabaseLayer.Models
 {
-    public class TreatmentPlan_Patientcs : CommonsProperty
+    public class PlanTreatmentPatient : CommonsProperty
     {
 
         public Guid PlanTratamientoID { get; set; }
@@ -12,10 +12,10 @@ namespace DatabaseLayer.Models
         public Guid ConsultationID { get; set; }
         public Consultation Consultation { get; set; }
 
-        public Guid PatientID { get; set; }
+        public Guid PatientId { get; set; }
         public Patient Patient { get; set; }
 
-        public Guid UserID { get; set; }
+        public string UserId { get; set; }
         public User User { get; set; }
 
 

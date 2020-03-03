@@ -4,11 +4,13 @@ VisualStudioVersion = 16.0.29326.143
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HiDentalAPI", "HiDentalAPI\HiDentalAPI.csproj", "{49E20FB7-DE21-49E5-A419-D18165F65FAD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataBaseLayer", "DataBaseLayer\DataBaseLayer.csproj", "{8D72E617-7FD0-42D0-8187-28FA3A25B557}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DataBaseLayer", "DataBaseLayer\DataBaseLayer.csproj", "{8D72E617-7FD0-42D0-8187-28FA3A25B557}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Common", "Common\Common.csproj", "{DC286423-742C-454C-9D05-487BAB4250A7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Common", "Common\Common.csproj", "{DC286423-742C-454C-9D05-487BAB4250A7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BussinesLayer", "BussinesLayer\BussinesLayer.csproj", "{72F7EAB2-FB08-445F-B3B5-CC1046657676}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BussinesLayer", "BussinesLayer\BussinesLayer.csproj", "{72F7EAB2-FB08-445F-B3B5-CC1046657676}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Auth", "Auth\Auth.csproj", "{7363963C-A037-49F4-86AF-D9B8A9C44E32}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -32,6 +34,10 @@ Global
 		{72F7EAB2-FB08-445F-B3B5-CC1046657676}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{72F7EAB2-FB08-445F-B3B5-CC1046657676}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{72F7EAB2-FB08-445F-B3B5-CC1046657676}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7363963C-A037-49F4-86AF-D9B8A9C44E32}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7363963C-A037-49F4-86AF-D9B8A9C44E32}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7363963C-A037-49F4-86AF-D9B8A9C44E32}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7363963C-A037-49F4-86AF-D9B8A9C44E32}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

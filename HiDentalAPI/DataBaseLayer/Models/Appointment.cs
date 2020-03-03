@@ -9,10 +9,10 @@ namespace DatabaseLayer.Models
         public string Objective { get; set; }
         public string Note { get; set; }
 
-        public Guid PatientID { get; set; }
+        public Guid PatientId { get; set; }
         public Patient Patient { get; set; }
 
-        public Guid UserID { get; set; }
+        public string UserId { get; set; }
         public User User { get; set; }
 
     }
