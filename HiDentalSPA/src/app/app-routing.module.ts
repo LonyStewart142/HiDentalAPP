@@ -9,6 +9,10 @@ import { CommonLayout_ROUTES } from "./shared/routes/common-layout.routes";
 
 const appRoutes: Routes = [
     {
+        path: 'login', loadChildren: () => import('./login/login.module').then(m => m.LoginModule),
+        //canActivate: [AuthGuard]
+      },
+    {
         path: '',
         redirectTo: '/dashboard/default',
         pathMatch: 'full',
@@ -22,16 +26,18 @@ const appRoutes: Routes = [
         path: '', 
         component: FullLayoutComponent, 
         children: FullLayout_ROUTES
-    }
+    },
+ 
+    
 ];
 
-@NgModule({
+@NgModule({ 
     imports: [
         RouterModule.forRoot(appRoutes, { 
             preloadingStrategy: PreloadAllModules,
             useHash: true,
             scrollPositionRestoration: 'enabled' 
-        })
+        }),
     ],
     exports: [
         RouterModule
