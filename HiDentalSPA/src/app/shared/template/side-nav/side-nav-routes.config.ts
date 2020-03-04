@@ -6,14 +6,6 @@ export const ROUTES: SideNavInterface[] = [
         iconType: 'nzIcon',
         iconTheme: 'outline',
         icon: 'dashboard',
-        submenu: []
-    },
-    {
-        path: '',
-        title: 'Multi Level Menu',
-        iconType: 'nzIcon',
-        iconTheme: 'outline',
-        icon: 'appstore',
         submenu: [
             { 
                 path: '',
@@ -33,5 +25,91 @@ export const ROUTES: SideNavInterface[] = [
                 ] 
             }
         ]
-    }
+    },
+    {
+        path: '',
+        title: 'Citas',
+        iconType: 'nzIcon',
+        iconTheme: 'outline',
+        icon: 'schedule',
+        submenu: [
+      
+        ]
+    },
+    {
+        path: '',
+        title: 'Pacientes',
+        iconType: 'nzIcon',
+        iconTheme: 'outline',
+        icon: 'team',
+        submenu: [
+      
+        ]
+    },
+    {
+        path: '',
+        title: 'Consultas',
+        iconType: 'nzIcon',
+        iconTheme: 'outline',
+        icon: 'file-search',
+        submenu: [
+      
+        ]
+    },
+    {
+        path: '',
+        title: 'Tratamientos',
+        iconType: 'nzIcon',
+        iconTheme: 'outline',
+        icon: 'medicine-box',
+        submenu: [
+      
+        ]
+    },
+    {
+        path: '',
+        title: 'Servicios',
+        iconType: 'nzIcon',
+        iconTheme: 'outline',
+        icon: 'medicine-box',
+        submenu: [
+      
+        ]
+    },
+    {
+        path: '',
+        title: 'Reportes',
+        iconType: 'nzIcon',
+        iconTheme: 'outline',
+        icon: 'file',
+        submenu: [
+            { 
+                path: '',
+                title: 'Level 1', 
+                iconType: '', 
+                icon: '',
+                iconTheme: '',
+                submenu: [
+                    {
+                        path: '',
+                        title: 'Level 2',
+                        iconType: 'nzIcon',
+                        iconTheme: 'outline',
+                        icon: 'layout',
+                        submenu: []
+                    }    
+                ] 
+            }
+        ]
+    },
+    {
+        path: '',
+        title: 'Usuarios',
+        iconType: 'nzIcon',
+        iconTheme: 'outline',
+        icon: 'user',
+        submenu: [
+      
+        ]
+    },
 ]    

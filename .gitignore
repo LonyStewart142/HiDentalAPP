@@ -341,4 +341,5 @@ healthchecksdb
 
 bin/
 sqlite3/
+*Debug/
 
