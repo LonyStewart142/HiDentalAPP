@@ -1,4 +1,5 @@
 ﻿using Auth.Models;
+using Auth.ViewModels;
 using DatabaseLayer.Models;
 using System.Threading.Tasks;
 
@@ -6,9 +7,8 @@ namespace Auth.Interfaces
 {
     public interface IAuthService
     {
-        Task<bool> SignIn(User model);
-        Task<bool> Register(User model);
-        Task<AuthResult> BuildToken(User model);
-        string Test();
+        Task<bool> SignIn(UserViewModel model);
+        Task<bool> Register(CreateUserViewModel model);
+        Task<AuthResult> BuildToken(UserViewModel model);
     }
 }

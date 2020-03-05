@@ -1,5 +1,6 @@
-﻿using System;
-using BussinesLayer.Contracts;
+﻿using DatabaseLayer.Models.Users;
+using DataBaseLayer.Models.Commons;
+using System;
 
 namespace DatabaseLayer.Models
 {

@@ -1,6 +1,6 @@
-﻿using System;
+﻿using DataBaseLayer.Models.Commons;
+using System;
 using System.Collections.Generic;
-using BussinesLayer.Contracts;
 
 namespace DatabaseLayer.Models
 {

@@ -1,7 +1,7 @@
 ﻿using BussinesLayer.UnitOfWork;
-using DatabaseLayer.Models;
+using DatabaseLayer.Models.Users;
 using DatabaseLayer.Persistence;
-using DataBaseLayer.Models.Auth;
+using DataBaseLayer.Models.Users;
 using DataBaseLayer.Settings;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Identity;
@@ -66,6 +66,8 @@ namespace HiDentalAPI.Extensions
         {
             services.Configure<SwaggerSetting>(configuration.GetSection(nameof(SwaggerSetting)));
             services.Configure<AuthSetting>(configuration.GetSection(nameof(AuthSetting)));
+            services.Configure<AppSetting>(configuration.GetSection(nameof(AppSetting)));
+
         }
     }
 }

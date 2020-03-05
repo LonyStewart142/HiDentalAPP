@@ -1,8 +1,6 @@
-﻿using System;
+﻿using DataBaseLayer.Models.Commons;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
-using BussinesLayer.Contracts;
-using DatabaseLayer.Models;
 
 namespace DatabaseLayer.Models
 {

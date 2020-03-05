@@ -4,14 +4,16 @@ using DatabaseLayer.Persistence;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace DataBaseLayer.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20200304042130_FixAuthModelsv2")]
+    partial class FixAuthModelsv2
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -19,22 +21,7 @@ namespace DataBaseLayer.Migrations
                 .HasAnnotation("Relational:MaxIdentifierLength", 128)
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-            modelBuilder.Entity("DataBaseLayer.Models.UserPermission", b =>
-                {
-                    b.Property<string>("RoleId")
-                        .HasColumnType("nvarchar(450)");
-
-                    b.Property<string>("UserId")
-                        .HasColumnType("nvarchar(450)");
-
-                    b.HasKey("RoleId", "UserId");
-
-                    b.HasIndex("UserId");
-
-                    b.ToTable("AspNetUserRoles");
-                });
-
-            modelBuilder.Entity("DataBaseLayer.Models.Users.Permission", b =>
+            modelBuilder.Entity("DataBaseLayer.Models.Auth.Permission", b =>
                 {
                     b.Property<string>("Id")
                         .HasColumnType("nvarchar(450)");
@@ -85,54 +72,29 @@ namespace DataBaseLayer.Migrations
                     b.ToTable("AspNetRoles");
                 });
 
-            modelBuilder.Entity("DataBaseLayer.Models.Users.UserDetail", b =>
+            modelBuilder.Entity("DataBaseLayer.Models.Auth.UserPermission", b =>
                 {
-                    b.Property<Guid>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<string>("Description")
-                        .HasColumnType("nvarchar(max)");
-
                     b.Property<string>("UserId")
                         .HasColumnType("nvarchar(450)");
 
-                    b.Property<Guid>("UserTypeId")
-                        .HasColumnType("uniqueidentifier");
+                    b.Property<string>("RoleId")
+                        .HasColumnType("nvarchar(450)");
 
-                    b.HasKey("Id");
+                    b.Property<string>("RoleId1")
+                        .HasColumnType("nvarchar(450)");
 
-                    b.HasIndex("UserId")
-                        .IsUnique()
-                        .HasFilter("[UserId] IS NOT NULL");
+                    b.Property<string>("UserId1")
+                        .HasColumnType("nvarchar(450)");
 
-                    b.HasIndex("UserTypeId");
+                    b.HasKey("UserId", "RoleId");
 
-                    b.ToTable("UserDetails");
-                });
+                    b.HasIndex("RoleId");
 
-            modelBuilder.Entity("DataBaseLayer.Models.Users.UserType", b =>
-                {
-                    b.Property<Guid>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("uniqueidentifier");
+                    b.HasIndex("RoleId1");
 
-                    b.Property<DateTime>("CreateAt")
-                        .HasColumnType("datetime2");
+                    b.HasIndex("UserId1");
 
-                    b.Property<string>("Name")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<int>("State")
-                        .HasColumnType("int");
-
-                    b.Property<DateTime>("UpdateAt")
-                        .HasColumnType("datetime2");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("UserTypes");
+                    b.ToTable("AspNetUserRoles");
                 });
 
             modelBuilder.Entity("DatabaseLayer.Models.Appointment", b =>
@@ -274,7 +236,7 @@ namespace DataBaseLayer.Migrations
                     b.ToTable("Patients");
                 });
 
-            modelBuilder.Entity("DatabaseLayer.Models.Users.User", b =>
+            modelBuilder.Entity("DatabaseLayer.Models.User", b =>
                 {
                     b.Property<string>("Id")
                         .HasColumnType("nvarchar(450)");
@@ -446,32 +408,27 @@ namespace DataBaseLayer.Migrations
                     b.ToTable("AspNetUserTokens");
                 });
 
-            modelBuilder.Entity("DataBaseLayer.Models.UserPermission", b =>
+            modelBuilder.Entity("DataBaseLayer.Models.Auth.UserPermission", b =>
                 {
-                    b.HasOne("DataBaseLayer.Models.Users.Permission", "Role")
-                        .WithMany("Users")
+                    b.HasOne("DataBaseLayer.Models.Auth.Permission", null)
+                        .WithMany()
                         .HasForeignKey("RoleId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("DatabaseLayer.Models.Users.User", "User")
-                        .WithMany("UserRoles")
+                    b.HasOne("DataBaseLayer.Models.Auth.Permission", "Role")
+                        .WithMany("Users")
+                        .HasForeignKey("RoleId1");
+
+                    b.HasOne("DatabaseLayer.Models.User", null)
+                        .WithMany()
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
-                });
 
-            modelBuilder.Entity("DataBaseLayer.Models.Users.UserDetail", b =>
-                {
-                    b.HasOne("DatabaseLayer.Models.Users.User", "User")
-                        .WithOne("UserDetail")
-                        .HasForeignKey("DataBaseLayer.Models.Users.UserDetail", "UserId");
-
-                    b.HasOne("DataBaseLayer.Models.Users.UserType", "UserType")
-                        .WithMany("UserDetails")
-                        .HasForeignKey("UserTypeId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                    b.HasOne("DatabaseLayer.Models.User", "User")
+                        .WithMany("UserRoles")
+                        .HasForeignKey("UserId1");
                 });
 
             modelBuilder.Entity("DatabaseLayer.Models.Appointment", b =>
@@ -482,7 +439,7 @@ namespace DataBaseLayer.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("DatabaseLayer.Models.Users.User", "User")
+                    b.HasOne("DatabaseLayer.Models.User", "User")
                         .WithMany("Appointment")
                         .HasForeignKey("UserId");
                 });
@@ -495,14 +452,14 @@ namespace DataBaseLayer.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("DatabaseLayer.Models.Users.User", "User")
+                    b.HasOne("DatabaseLayer.Models.User", "User")
                         .WithMany("Consults")
                         .HasForeignKey("UserId");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>
                 {
-                    b.HasOne("DataBaseLayer.Models.Users.Permission", null)
+                    b.HasOne("DataBaseLayer.Models.Auth.Permission", null)
                         .WithMany()
                         .HasForeignKey("RoleId")
                         .OnDelete(DeleteBehavior.Cascade)
@@ -511,7 +468,7 @@ namespace DataBaseLayer.Migrations
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserClaim<string>", b =>
                 {
-                    b.HasOne("DatabaseLayer.Models.Users.User", null)
+                    b.HasOne("DatabaseLayer.Models.User", null)
                         .WithMany()
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
@@ -520,7 +477,7 @@ namespace DataBaseLayer.Migrations
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserLogin<string>", b =>
                 {
-                    b.HasOne("DatabaseLayer.Models.Users.User", null)
+                    b.HasOne("DatabaseLayer.Models.User", null)
                         .WithMany()
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
@@ -529,7 +486,7 @@ namespace DataBaseLayer.Migrations
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserToken<string>", b =>
                 {
-                    b.HasOne("DatabaseLayer.Models.Users.User", null)
+                    b.HasOne("DatabaseLayer.Models.User", null)
                         .WithMany()
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)

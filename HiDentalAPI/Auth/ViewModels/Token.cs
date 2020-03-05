@@ -1,9 +1,6 @@
-﻿using DatabaseLayer.Models;
-using DataBaseLayer.Models.Auth;
+﻿using Auth.ViewModels;
 using System;
 using System.Collections.Generic;
-using System.Security.Claims;
-using System.Text;
 
 namespace Auth.Models
 {
@@ -12,7 +9,7 @@ namespace Auth.Models
         public string Token { get; set; }
         public DateTime Expiration { get; set; }
         public bool Expire { get; set; }
-        public List<Permission> Permissions { get; set; }
+        public List<PermissionViewModel> Permissions { get; set; }
         public string UserName { get; set; }
     }
 }

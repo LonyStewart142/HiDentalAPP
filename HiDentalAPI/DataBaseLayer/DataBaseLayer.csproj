@@ -9,6 +9,8 @@
     <Compile Remove="Migrations\20200303041328_init.Designer.cs" />
     <Compile Remove="Migrations\20200303044212_ChangeModelName.cs" />
     <Compile Remove="Migrations\20200303044212_ChangeModelName.Designer.cs" />
+    <Compile Remove="Migrations\20200305013053_AddUserDetail.cs" />
+    <Compile Remove="Migrations\20200305013053_AddUserDetail.Designer.cs" />
   </ItemGroup>
 
   <ItemGroup>

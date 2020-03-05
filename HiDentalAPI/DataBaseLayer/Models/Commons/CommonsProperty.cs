@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 using DatabaseLayer.Enums;
 
-namespace BussinesLayer.Contracts
+namespace DataBaseLayer.Models.Commons
 {
   public class CommonsProperty
     {

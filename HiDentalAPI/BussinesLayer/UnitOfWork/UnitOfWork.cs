@@ -2,7 +2,7 @@
 using Auth.Services;
 using BussinesLayer.Contracts;
 using BussinesLayer.Services;
-using DatabaseLayer.Models;
+using DatabaseLayer.Models.Users;
 using DatabaseLayer.Persistence;
 using DataBaseLayer.Settings;
 using Microsoft.AspNetCore.Identity;

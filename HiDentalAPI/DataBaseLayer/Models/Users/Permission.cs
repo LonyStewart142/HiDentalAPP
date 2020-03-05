@@ -1,10 +1,11 @@
 ﻿using DatabaseLayer.Enums;
+using DataBaseLayer.Models.Users;
 using Microsoft.AspNetCore.Identity;
 using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace DataBaseLayer.Models.Auth
+namespace DataBaseLayer.Models.Users
 {
     public class Permission : IdentityRole
     {
@@ -16,5 +17,7 @@ namespace DataBaseLayer.Models.Auth
         public bool HasChild { get; set; }
         public bool IsExpanded { get; set; }
         public string ParentId { get; set; }
+        public ICollection<UserPermission> Users { get; set; }
+
     }
 }

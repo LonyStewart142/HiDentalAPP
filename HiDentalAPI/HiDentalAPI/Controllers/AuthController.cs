@@ -1,14 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using Auth.ViewModels;
 using BussinesLayer.UnitOfWork;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using System.Threading.Tasks;
 
 namespace HiDentalAPI.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("api/[controller]/[action]")]
     [ApiController]
     public class AuthController : ControllerBase
     {
@@ -17,7 +14,27 @@ namespace HiDentalAPI.Controllers
         {
             _service = service;
         }
-        [HttpGet]
-        public IActionResult Index() => Ok(_service.AuthService.Test());
+        [HttpPost]
+        public async Task<IActionResult> SigIn(UserViewModel model)
+        {
+            if (ModelState.IsValid)
+            {
+                var result = await _service.AuthService.SignIn(model);
+                if (result) return Ok(await _service.AuthService.BuildToken(model));
+            }
+            return BadRequest(model);
+        }
+
+
+        [HttpPost]
+        public async Task<IActionResult> Create(CreateUserViewModel model)
+        {
+            if (ModelState.IsValid)
+            {
+                var result = await _service.AuthService.Register(model);
+                if (result) return Ok(await _service.AuthService.BuildToken(new UserViewModel { UserName = model.UserName, Password = model.Password }));
+            }
+            return BadRequest(model);
+        }
     }
 }

@@ -1,3 +1,4 @@
+using BussinesLayer.Services.DataSeeds;
 using DataBaseLayer.Settings;
 using HiDentalAPI.Extensions;
 using Microsoft.AspNetCore.Builder;
@@ -39,6 +40,7 @@ namespace HiDentalAPI
             {
                 app.UseDeveloperExceptionPage();
             }
+            
             app.UseAuthentication();
             app.UseCors(nameof(Startup));
             app.UseStaticFiles();
@@ -58,6 +60,8 @@ namespace HiDentalAPI
             {
                 endpoints.MapControllers();
             });
+
+            DataSeedService.SeedsOfApp(app);
         }
     }
 }
